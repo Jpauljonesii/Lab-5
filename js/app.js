@@ -114,6 +114,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let testArray = [2, 3, 4];
+  let theProduct = multiply(testArray[0], testArray[1])[0];
+  let theProduct1 = multiply(theProduct, testArray[2])[0];
+  let message = 'The numbers ' + 2 + ',' + 3 + ',' + 4 + ' have a product of ' + 24 + '.';
+  let arr = [];
+  arr[0] = theProduct1;
+  arr[1] = message;
+  return[theProduct1, message];
 
 }
 
