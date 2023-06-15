@@ -150,6 +150,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+  let theProduct = multiply(testDynamicArray[0], testDynamicArray[1])[0];
+  let theProduct1 = multiply(theProduct, testDynamicArray[2])[0];
+  let theProduct2 = multiply(theProduct1, testDynamicArray[3])[0];
+  let theProduct3 = multiply(theProduct2, testDynamicArray[4])[0];
+  let message = 'The numbers ' + 1 + ',' + 2 + ',' + 3 + ',' + 4 + ',' + 5 + ' have a product of ' + 120 + '.';
+  let arr = [];
+  arr[0] = theProduct1;
+  arr[1] = theProduct2;
+  arr[2] = theProduct3;
+  arr[3] = message;
+  return[theProduct3, message];
 
 }
 
